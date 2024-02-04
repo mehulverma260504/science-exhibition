@@ -1,0 +1,38 @@
+{% extends 'testing.html' %}
+{% block content %}
+<div class="container">
+    <div class="row" style="margin-bottom: 477px;">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            {% if pred == 1 %}
+            <div class="card card-body alert alert-danger">
+                <center>Sorry! Please consult DOCTOR.
+                    <br>
+                    <br>
+                    <p style="text-align: left;">Precautions which you can take are:-</p>
+                    <ul style="text-align: left;">
+                        <li>Maintain a healthy weight.</li>
+                        <li>Be physically active.</li>
+                        <li>Limit alcohol and avoid smoking.</li>
+                        <li>Follow a balanced diet.</li>
+                        <li>Regularly self-examine your breasts and get regular mammograms.</li>
+                        <li>Consult a doctor if you notice any changes in your breasts.</li>
+                    </ul>
+                </center>
+            </div>
+            {% else %}
+            <div class="card card-body alert alert-success">
+                <center>Great! You are HEALTHY.</center>
+            </div>
+            {% endif %}
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4"><a href="{{ url_for('home') }}" class="btn btn-block btn-primary">Back to Home</a>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+{% endblock %}
