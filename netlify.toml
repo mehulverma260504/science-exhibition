@@ -1,6 +1,6 @@
 # example netlify.toml
 [build]
-  command = "flask run"
+  command = "export TF_ENABLE_ONEDNN_OPTS=0 && flask run"
   functions = ""
   publish = "templates"
 
