@@ -1,5 +1,4 @@
 {
-  "version": 2,
   "builds": [
     {
       "src": "app.py",
@@ -7,6 +6,7 @@
       "config": {
         "maxLambdaSize": "15mb",
         "runtime": "python3.8"
+      }
     }
   ],
   "routes": [
